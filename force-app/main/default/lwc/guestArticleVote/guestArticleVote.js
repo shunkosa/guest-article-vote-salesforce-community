@@ -2,7 +2,7 @@ import { LightningElement, api, track } from 'lwc';
 import existsVoteResult from '@salesforce/apex/GuestArticleVoteController.existsVoteResult';
 import vote from '@salesforce/apex/GuestArticleVoteController.vote';
 
-const COOKIE_NAME = 'guest_user_id';
+const COOKIE_KEY = 'guest_user_id';
 
 export default class GuestArticleVote extends LightningElement {
     @api recordId;
@@ -24,9 +24,9 @@ export default class GuestArticleVote extends LightningElement {
     currentGuestUserId = '';
 
     connectedCallback() {
-        this.currentGuestUserId = this.getCookie(COOKIE_NAME);
+        this.currentGuestUserId = this.getCookie(COOKIE_KEY);
         if (!this.currentGuestUserId) {
-            this.currentGuestUserId = this.setCookie(COOKIE_NAME, this.generateUUID());
+            this.currentGuestUserId = this.setCookie(COOKIE_KEY, this.generateUUID());
         }
         existsVoteResult({ articleVersionId: this.recordId, guestUserId: this.currentGuestUserId })
             .then(result => {
@@ -57,23 +57,23 @@ export default class GuestArticleVote extends LightningElement {
             });
     }
 
-    getCookie(name) {
+    getCookie(key) {
         const cookieString = "; " + document.cookie;
-        const parts = cookieString.split("; " + name + "=");
+        const parts = cookieString.split("; " + key + "=");
         if (parts.length === 2) {
             return parts.pop().split(";").shift();
         }
         return null;
     }
 
-    setCookie(name, value) {
-        document.cookie = name + "=" + escape(value) + "; path=/";
+    setCookie(key, value) {
+        document.cookie = `${key}=${value}; path=/`;
         return value;
     }
 
     generateUUID() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-            var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+            const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
     }
