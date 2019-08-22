@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="guestArticleVote">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+      <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String" label="Record Id" description="The value should be {!recordId}." />
+            <property name="message_ask" type="String" label="Message before vote" default="Was this article helpful?" />
+            <property name="message_thankyou" type="String" label="Message after vote" default="Thank you for your voice!" />
+            <property name="label_choice_yes" type="String" label="Button label for upvote" default="Yes" />
+            <property name="label_choice_no" type="String" label="Button label for downvote" default="No" />
+      </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

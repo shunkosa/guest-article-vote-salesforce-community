@@ -1,0 +1,24 @@
+<template>
+    <template if:true={isLoaded}>
+        <template if:false={isVoted}>
+            <lightning-layout multiple-rows="true" horizontal-align="center">
+                <lightning-layout-item size="12" class="slds-text-align_center slds-p-bottom_x-small">
+                    <span>{message_ask}</span>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-small">
+                    <lightning-button variant="brand" icon-name="utility:check" onclick={upvote}
+                        label={label_choice_yes}>
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-button variant="neutral" icon-name="utility:close" onclick={downvote}
+                        label={label_choice_no}>
+                    </lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+        <template if:true={isCompleted}>
+            <div class="slds-text-align_center">{message_thankyou}</div>
+        </template>
+    </template>
+</template>
