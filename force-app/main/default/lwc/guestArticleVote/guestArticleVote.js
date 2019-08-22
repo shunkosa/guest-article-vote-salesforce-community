@@ -9,13 +9,16 @@ export default class GuestArticleVote extends LightningElement {
 
     @api message_ask;
     @api message_thankyou;
+
     @api label_choice_yes;
     @api label_choice_no;
 
-    @api color_default_choice_yes;
-    @api color_default_choice_no;
-    @api color_hover_choice_yes;
-    @api color_hover_choice_no;
+    @api backgroundcolor_default_choice_yes = '#0070d2';
+    @api backgroundcolor_hover_choice_yes = '#005fb2';
+    @api fontcolor_choice_yes = '#FFFFFF';
+    @api backgroundcolor_default_choice_no = '#FFFFFF';
+    @api backgroundcolor_hover_choice_no = '#F4F6F9';
+    @api fontcolor_choice_no = '#0070d2';
 
     @track isLoaded = false;
     @track isVoted = false;
@@ -26,17 +29,26 @@ export default class GuestArticleVote extends LightningElement {
     connectedCallback() {
         this.currentGuestUserId = this.getCookie(COOKIE_KEY);
         if (!this.currentGuestUserId) {
-            this.currentGuestUserId = this.setCookie(COOKIE_KEY, this.generateUUID());
+            this.currentGuestUserId = this.setCookie(
+                COOKIE_KEY,
+                this.generateUUID()
+            );
         }
-        existsVoteResult({ articleVersionId: this.recordId, guestUserId: this.currentGuestUserId })
-            .then(result => {
-                this.isVoted = result;
-                this.isLoaded = true;
-            });
+        existsVoteResult({
+            articleVersionId: this.recordId,
+            guestUserId: this.currentGuestUserId
+        }).then((result) => {
+            this.isVoted = result;
+            this.isLoaded = true;
+        });
     }
 
     upvote() {
-        vote({ articleVersionId: this.recordId, guestUserId: this.currentGuestUserId, isUpvoted: true })
+        vote({
+            articleVersionId: this.recordId,
+            guestUserId: this.currentGuestUserId,
+            isUpvoted: true
+        })
             .then(() => {
                 this.isVoted = true;
                 this.isCompleted = true;
@@ -47,7 +59,11 @@ export default class GuestArticleVote extends LightningElement {
     }
 
     downvote() {
-        vote({ articleVersionId: this.recordId, guestUserId: this.currentGuestUserId, isUpvoted: false })
+        vote({
+            articleVersionId: this.recordId,
+            guestUserId: this.currentGuestUserId,
+            isUpvoted: false
+        })
             .then(() => {
                 this.isVoted = true;
                 this.isCompleted = true;
@@ -58,10 +74,13 @@ export default class GuestArticleVote extends LightningElement {
     }
 
     getCookie(key) {
-        const cookieString = "; " + document.cookie;
-        const parts = cookieString.split("; " + key + "=");
+        const cookieString = '; ' + document.cookie;
+        const parts = cookieString.split('; ' + key + '=');
         if (parts.length === 2) {
-            return parts.pop().split(";").shift();
+            return parts
+                .pop()
+                .split(';')
+                .shift();
         }
         return null;
     }
@@ -73,9 +92,17 @@ export default class GuestArticleVote extends LightningElement {
 
     generateUUID() {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-            const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+            const r = (Math.random() * 16) | 0,
+                v = c === 'x' ? r : (r & 0x3) | 0x8;
             return v.toString(16);
         });
     }
 
+    get upvoteButtonStyle() {
+        return `background-color:${this.backgroundcolor_default_choice_yes}; :hover {background-color:${this.backgroundcolor_hover_choice_yes}}; color:${this.fontcolor_choice_yes}`;
+    }
+
+    get downvoteButtonStyle() {
+        return `background-color:${this.backgroundcolor_default_choice_no}; :hover {background-color:${this.backgroundcolor_hover_choice_no}}; color:${this.fontcolor_choice_no}`;
+    }
 }

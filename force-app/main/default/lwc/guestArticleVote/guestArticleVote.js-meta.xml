@@ -12,8 +12,14 @@
             <property name="recordId" type="String" label="Record Id" description="The value should be {!recordId}." />
             <property name="message_ask" type="String" label="Message before vote" default="Was this article helpful?" />
             <property name="message_thankyou" type="String" label="Message after vote" default="Thank you for your voice!" />
-            <property name="label_choice_yes" type="String" label="Button label for upvote" default="Yes" />
-            <property name="label_choice_no" type="String" label="Button label for downvote" default="No" />
+            <property name="label_choice_yes" type="String" label="Label for upvote button" default="Yes" />
+            <property name="backgroundcolor_default_choice_yes" type="String" label="Background color for upvote button" default="#0070d2" />
+            <property name="backgroundcolor_hover_choice_yes" type="String" label="Hover background color for upvote button" default="#0070d2" />
+            <property name="fontcolor_choice_yes" type="String" label="Font color for upvote button" default="#FFFFFF" />
+            <property name="label_choice_no" type="String" label="Button label for downvote button" default="No" />
+            <property name="backgroundcolor_default_choice_no" type="String" label="Background color for downvote button" default="#FFFFFF" />
+            <property name="backgroundcolor_hover_choice_no" type="String" label="Hover background color for downvote button" default="#DDDDDD" />
+            <property name="fontcolor_choice_no" type="String" label="Font color for downvote button" default="#0070d2" />
       </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

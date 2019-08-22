@@ -2,18 +2,39 @@
     <template if:true={isLoaded}>
         <template if:false={isVoted}>
             <lightning-layout multiple-rows="true" horizontal-align="center">
-                <lightning-layout-item size="12" class="slds-text-align_center slds-p-bottom_x-small">
+                <lightning-layout-item
+                    size="12"
+                    class="slds-text-align_center slds-p-bottom_x-small"
+                >
                     <span>{message_ask}</span>
                 </lightning-layout-item>
                 <lightning-layout-item padding="horizontal-small">
-                    <lightning-button variant="brand" icon-name="utility:check" onclick={upvote}
-                        label={label_choice_yes}>
-                    </lightning-button>
+                    <button
+                        class="slds-button slds-p-left_x-small slds-p-right_x-small"
+                        onclick={upvote}
+                        style={upvoteButtonStyle}
+                    >
+                        <lightning-icon
+                            icon-name="utility:check"
+                            size="x-small"
+                            class="slds-button__icon slds-button__icon_left"
+                        ></lightning-icon>
+                        {label_choice_yes}
+                    </button>
                 </lightning-layout-item>
                 <lightning-layout-item>
-                    <lightning-button variant="neutral" icon-name="utility:close" onclick={downvote}
-                        label={label_choice_no}>
-                    </lightning-button>
+                    <button
+                        class="slds-button slds-p-left_x-small slds-p-right_x-small"
+                        onclick={downvote}
+                        style={downvoteButtonStyle}
+                    >
+                        <lightning-icon
+                            icon-name="utility:close"
+                            size="x-small"
+                            class="slds-button__icon slds-button__icon_left"
+                        ></lightning-icon>
+                        {label_choice_no}
+                    </button>
                 </lightning-layout-item>
             </lightning-layout>
         </template>
