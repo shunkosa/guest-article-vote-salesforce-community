@@ -1,4 +1,4 @@
-# Article Vote Component for Guest User in Lightning Community
+# Article Vote for Guest User in Lightning Community
 
 Let guest user in Salesforce community vote on articles, and see results in a custom object
 
@@ -22,3 +22,19 @@ Let guest user in Salesforce community vote on articles, and see results in a cu
 5. If you enabled `Allow voting on articles` in standard Article Content component, make sure that this vote component is visible for only guest users.
 
 ![](img/assign-audience.png)
+
+## Vote result
+
+Vote result is stored in `GuestArticleVote__c` custom object. This custom object has the following fields. Create a report of this object for your knowledge improvement lifecycle.
+
+-   **Knowledge** : Lookup to Knowledge Article Version
+-   **Guest User Id** : Unique Id for guest users. This value is saved to cookie on guest users' browser to avoid duplicate vote.
+-   **Upvoted?** : Checked if upvoted.
+
+## Feedback/Contributing
+
+Feature requests, bug reports and pull requests are welcome!
+
+## License
+
+The source code is licensed under the [MIT license](./LICENSE)
