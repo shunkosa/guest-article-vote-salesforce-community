@@ -2,6 +2,8 @@
 
 Let guest user in Salesforce community vote on articles, and see results in a custom object
 
+[English](README.md) | [日本語](README.ja.md)
+
 ![](img/screenshot.png)
 
 ## Prerequisite
@@ -30,6 +32,10 @@ Vote result is stored in `GuestArticleVote__c` custom object. This custom object
 -   **Knowledge** : Lookup to Knowledge Article Version
 -   **Guest User Id** : Unique Id for guest users. This value is saved to cookie on guest users' browser to avoid duplicate vote.
 -   **Upvoted?** : Checked if upvoted.
+
+## Motivation
+
+Based on the idea ["Let UNAUTHENTICATED community users vote on articles when using Napili Template"](https://success.salesforce.com/ideaView?id=0873A000000CNLzQAO). In classic, [PKB by Salesforce Labs](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N300000059QxXEAU) is available but it won't be updated and Lightning Knowledge is not supported.
 
 ## Feedback/Contributing
 
