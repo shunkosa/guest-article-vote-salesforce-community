@@ -29,7 +29,7 @@ Let guest user in Salesforce community vote on articles, and see results in a cu
 
 Vote result is stored in `GuestArticleVote__c` custom object. This custom object has the following fields. Create a report of this object for your knowledge improvement lifecycle.
 
--   **Knowledge** : Lookup to Knowledge Article Version
+-   **Knowledge** : Lookup to Knowledge Article Version (NOTICE: Make sure to select 'Read-Only' when you modify this field to master-detail)
 -   **Guest User Id** : Unique Id for guest users. This value is saved to cookie on guest users' browser to avoid duplicate vote.
 -   **Upvoted?** : Checked if upvoted.
 
