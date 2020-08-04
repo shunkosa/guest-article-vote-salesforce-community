@@ -15,7 +15,7 @@
 
 ## 使用方法
 
-1. パッケージをインストールする ([本番環境/DE](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047tgtAAA) | [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047tgtAAA)) か、このリポジトリをクローンして、ソースコードを組織にデプロイします。
+1. パッケージをインストールする ([本番環境/DE](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047wJPAAY) | [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047wJPAAY)) か、このリポジトリをクローンして、ソースコードを組織にデプロイします。
 
 2. コミュニティビルダーの記事詳細ページに `Article Vote for Guest Users` コンポーネントを配置します。
 

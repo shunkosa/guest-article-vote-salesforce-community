@@ -15,7 +15,7 @@ Let guest user in Salesforce community vote on articles, and see results in a cu
 
 ## How to use
 
-1. Install package ([Production/DE](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047tgtAAA) | [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047tgtAAA)), or clone the repository and push/deploy source to the target org.
+1. Install package ([Production/DE](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047wJPAAY) | [Sandbox](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tf40000047wJPAAY)), or clone the repository and push/deploy source to the target org.
 
 2. Put `Article Vote for Guest Users` on Article Detail page of your community.
 
