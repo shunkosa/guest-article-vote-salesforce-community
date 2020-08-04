@@ -29,3 +29,6 @@ $RECYCLE.BIN/
 
 # VS Code setting files
 .vscode
+
+# Codecov
+coverage/
