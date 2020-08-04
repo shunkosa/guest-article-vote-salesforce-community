@@ -1,14 +1,14 @@
 {
-  "orgName": "Demo Company",
-  "edition": "Developer",
-  "features": ["Communities","Knowledge"],
-  "settings": {
-    "orgPreferenceSettings": {
-      "s1DesktopEnabled": true
-    },
-    "knowledgeSettings": {
-      "enableKnowledge": true,
-      "enableLightningKnowledge": true
+    "orgName": "Demo Company",
+    "edition": "Developer",
+    "features": ["Communities", "Knowledge"],
+    "settings": {
+        "knowledgeSettings": {
+            "enableKnowledge": true,
+            "enableLightningKnowledge": true
+        },
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        }
     }
-  }
 }
