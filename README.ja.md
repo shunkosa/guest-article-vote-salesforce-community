@@ -25,6 +25,8 @@
 
 ![](img/assign-audience.png)
 
+6. コミュニティのゲストユーザプロファイルで `GuestArticleVoteController` Apex クラスのアクセスを許可します。
+
 ## 投票結果
 
 投票結果は `GuestArticleVote__c` というカスタムオブジェクトに保存されます。このカスタムオブジェクトには以下の項目が含まれます。このカスタムオブジェクトに対してレポートを作成することで、ナレッジの改善に役立てることができます。
@@ -39,4 +41,4 @@
 
 ## ライセンス
 
-[MIT license](./LICENSE)です。
+[MIT license](./LICENSE) です。

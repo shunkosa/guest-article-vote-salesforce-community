@@ -25,6 +25,8 @@ Let guest user in Salesforce community vote on articles, and see results in a cu
 
 ![](img/assign-audience.png)
 
+6. Allow the guest user profile to access `GuestArticleVoteController` Apex class. 
+
 ## Vote result
 
 Vote result is stored in `GuestArticleVote__c` custom object. This custom object has the following fields. Create a report of this object for your knowledge improvement lifecycle.
