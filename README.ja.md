@@ -1,5 +1,7 @@
 # Community Cloud のゲストユーザ向け記事の投票
 
+[![Github Workflow](https://github.com/shunkosa/guest-article-vote-salesforce-community/workflows/unit%20test/badge.svg?branch=master)](https://github.com/shunkosa/guest-article-vote-salesforce-community/actions?query=workflow%3A%22unit%20test%22) [![codecov](https://codecov.io/gh/shunkosa/guest-article-vote-salesforce-community/branch/master/graph/badge.svg)](https://codecov.io/gh/shunkosa/guest-article-vote-salesforce-community)
+
 コミュニティで公開されたナレッジ記事をゲストユーザが投票できるようにするコンポーネントです。投票結果はカスタムオブジェクト内で確認できます。
 
 [English](README.md) | [日本語](README.ja.md)

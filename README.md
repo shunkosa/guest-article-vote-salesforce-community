@@ -1,5 +1,7 @@
 # Article Vote for Guest User in Lightning Community
 
+[![Github Workflow](https://github.com/shunkosa/guest-article-vote-salesforce-community/workflows/unit%20test/badge.svg?branch=master)](https://github.com/shunkosa/guest-article-vote-salesforce-community/actions?query=workflow%3A%22unit%20test%22) [![codecov](https://codecov.io/gh/shunkosa/guest-article-vote-salesforce-community/branch/master/graph/badge.svg)](https://codecov.io/gh/shunkosa/guest-article-vote-salesforce-community)
+
 Let guest user in Salesforce community vote on articles, and see results in a custom object
 
 [English](README.md) | [日本語](README.ja.md)
@@ -25,7 +27,7 @@ Let guest user in Salesforce community vote on articles, and see results in a cu
 
 ![](img/assign-audience.png)
 
-6. Allow the guest user profile to access `GuestArticleVoteController` Apex class. 
+6. Allow the guest user profile to access `GuestArticleVoteController` Apex class.
 
 ## Vote result
 
