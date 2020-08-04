@@ -10,7 +10,7 @@
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "46.0",
+    "sourceApiVersion": "49.0",
     "packageAliases": {
         "guest-article-vote": "0Hof4000000CafECAS",
         "guest-article-vote@1.0.0-1": "04tf40000047tgtAAA"
